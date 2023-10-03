@@ -1,95 +1,59 @@
-import Image from "next/image";
-import Link from "next/link";
+'use client';
+
+import { FaFacebookF } from 'react-icons/fa6';
+import { FaXTwitter } from 'react-icons/fa6';
+import { FaLinkedinIn } from 'react-icons/fa6';
+import { FaInstagram } from 'react-icons/fa6';
 
 const Footer = () => {
-     const currentYear = new Date().getFullYear();
-  return (
-    <div className="bg-[#000] text-white min-h-[40vh]">
-      <div className="max-w-[1440px] mx-auto p-4 px-5 md:px-20">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:place-items-center mt-10 gap-5">
-          <div>
-            <Image
-              className="my-5"
-              src="/images/web-logo.png"
-              width={150}
-              height={150}
-              alt="Picture of the author"
-            />
-            <p>
-              Some footer text about the Agency. Just a little description to
-              help people understand you better
-            </p>
-            <div className="flex gap-5 mt-3 mb-10">
-              <Link href="/">
-                <Image
-                  src="/images/f-facebook.png"
-                  width={30}
-                  height={30}
-                  alt="Picture of the author"
-                />
-              </Link>
-              <Link href="/">
-                <Image
-                  src="/images/f-instagram.png"
-                  width={30}
-                  height={30}
-                  alt="Picture of the author"
-                />
-              </Link>
-              <Link href="/">
-                <Image
-                  src="/images/f-twitter.png"
-                  width={30}
-                  height={30}
-                  alt="Picture of the author"
-                />
-              </Link>
-              <Link href="/">
-                <Image
-                  src="/images/f-linkedin.png"
-                  width={30}
-                  height={30}
-                  alt="Picture of the author"
-                />
-              </Link>
+    return (
+        <footer className="bg-black">
+            <div className="container py-24 mx-auto text-white">
+                <div className="mb-10 md:flex md:justify-between">
+                    <div>
+                        <h2 className="mb-10 text-4xl font-bold uppercase">Site Logo</h2>
+                        <p className="max-w-xs mb-6 text-lg font-thin">
+                            Some footer text about the Agency. Just a little description to help people understand you
+                            better
+                        </p>
+                        <div className="flex gap-3">
+                            <div className="flex items-center justify-center w-10 h-10 rounded-full bg-brand">
+                                {' '}
+                                <FaFacebookF />{' '}
+                            </div>
+                            <div className="flex items-center justify-center w-10 h-10 rounded-full bg-brand">
+                                {' '}
+                                <FaXTwitter />{' '}
+                            </div>
+                            <div className="flex items-center justify-center w-10 h-10 rounded-full bg-brand">
+                                {' '}
+                                <FaLinkedinIn />{' '}
+                            </div>
+                            <div className="flex items-center justify-center w-10 h-10 rounded-full bg-brand">
+                                {' '}
+                                <FaInstagram />{' '}
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <p className="mb-2 text-xl font-semibold">Quick Links</p>
+                        <ul className="flex flex-col gap-3">
+                            <li className="text-lg font-thin">Services</li>
+                            <li className="text-lg font-thin">Portfolio</li>
+                            <li className="text-lg font-thin">About Us </li>
+                            <li className="text-lg font-thin">Contact Us</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <p className="mb-2 text-xl font-semibold">Address</p>
+                        <p className="max-w-xs text-lg font-thin">
+                            Design Agency Head Office. Airport Road United Arab Emirate
+                        </p>
+                    </div>
+                </div>
+                <div className="text-lg">© Copyright Design Agency 2022</div>
             </div>
-          </div>
-          <div className="list-none ">
-            <h2 className="font-bold text-2xl md:mt-10">Quick Links</h2>
-            <li className="mt-5">
-              <Link href="/" className="hover:underline">
-                Services
-              </Link>
-            </li>
-            <li className="mt-5">
-              <Link href="/" className="hover:underline">
-                Portfolio
-              </Link>
-            </li>
-            <li className="mt-5">
-              <Link href="/" className="hover:underline">
-                About Us
-              </Link>
-            </li>
-            <li className="mt-5">
-              <Link href="/" className="hover:underline">
-                Contact Us
-              </Link>
-            </li>
-          </div>
-          <div className="list-none md-mt-10">
-            <h2 className="mb-5 font-bold text-2xl">Address</h2>
-            <li>Design Agency Head Office.</li>
-            <li>Airport Road</li>
-            <li>United Arab Emirate</li>
-          </div>
-        </div>
-        <footer>
-          <p className="text-[14px] mt-5">Copyright Design Agency {currentYear}</p>
         </footer>
-      </div>
-    </div>
-  );
+    );
 };
-
 export default Footer;

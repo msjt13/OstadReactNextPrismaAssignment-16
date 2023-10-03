@@ -1,11 +1,11 @@
+import AllService from "@/components/AllService";
 import Breadcrumb from "@/components/Breadcrumb";
 import SubscribeSection from "@/components/SubscribeSection";
-import Testimonial from "@/components/Testimonial";
 
 const Page = () => {
   return <div>
-    <Breadcrumb title={'Testimonial List'} />
-    <Testimonial/>
+    <Breadcrumb title={'Service'}/>
+    <AllService/>
     <SubscribeSection/>
   </div>;
 };

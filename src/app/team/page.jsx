@@ -1,21 +1,12 @@
-import CommonHero from "@/components/CommonHero";
-import TeamMember from "@/components/TeamMember";
+import Breadcrumb from "@/components/Breadcrumb";
+import SubscribeSection from "@/components/SubscribeSection";
+import TeamList from "@/components/TeamList";
 
-export const metadata = {
-  title: "Design-Agency | Team",
+const Page = () => {
+  return <div>
+    <Breadcrumb title={'Team'}/>
+    <TeamList />
+    <SubscribeSection/>
+  </div>;
 };
-
-const page = () => {
-  return (
-    <div>
-      <CommonHero heading="Team" nav="Home" currentNav="Team" />
-      <TeamMember />
-    </div>
-  );
-};
-
-export default page;
-
- 
-
- 
+export default Page;

@@ -1,17 +1,12 @@
-import AllProjects from "@/components/AllProjects";
-import CommonHero from "@/components/CommonHero";
+import AllProject from "@/components/AllProject";
+import Breadcrumb from "@/components/Breadcrumb";
+import SubscribeSection from "@/components/SubscribeSection";
 
-export const metadata = {
-  title: "Design-Agency | Projects",
+const Page = () => {
+  return <div>
+    <Breadcrumb title={'All Project'}/>
+    <AllProject/>
+    <SubscribeSection/>
+  </div>;
 };
-
-const page = () => {
-  return (
-    <div>
-      <CommonHero heading="Projects" nav="Home" currentNav="Projects" />
-      <AllProjects />
-    </div>
-  );
-};
-
-export default page;
+export default Page;
